@@ -76,7 +76,7 @@ public class CPD3314Assign5Test {
         double result = CPD3314Assign5.distance(time, speed);
         assertEquals("Testing if distance(time, speed) produces accurate result.",
                 result, expected, 0.0001);
-    }
+    }    
 
     /**
      * Test of isPrime method, of class CPD3314Assign5.
@@ -99,6 +99,30 @@ public class CPD3314Assign5Test {
         boolean expected = false;
         double result = CPD3314Assign5.isPrime(input);
         assertEquals("Testing if isPrime(num) produces accurate result.",
+                result, expected);
+    }
+    
+    /**
+     * Test of isEven method, of class CPD3314Assign5.
+     */
+    @Test
+    public void testIsEvenCase1() {
+        int input = 6;
+        boolean expected = true;
+        double result = CPD3314Assign5.isEven(input);
+        assertEquals("Testing if isEven(num) produces accurate result.",
+                result, expected);
+    }
+
+    /**
+     * Test of isEven method, of class CPD3314Assign5.
+     */
+    @Test
+    public void testIsEvenCase2() {
+        int input = 7;
+        boolean expected = false;
+        double result = CPD3314Assign5.isEven(input);
+        assertEquals("Testing if isEven(num) produces accurate result.",
                 result, expected);
     }
 }
