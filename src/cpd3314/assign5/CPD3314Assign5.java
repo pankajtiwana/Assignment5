@@ -32,7 +32,9 @@ public class CPD3314Assign5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO: This is a sandbox. 
+        // Modify it and use it to call whatever methods below you want to run.
+        
     }
 
     /*
@@ -51,37 +53,30 @@ public class CPD3314Assign5 {
      * - Gaddis pg. 316
      */
     // TODO: Build the calculateRetail method here
+    
+    
     public static void doExercise2() {
         // TODO: Complete the rest of Exercise #2 here to test calculateRetail
 
     }
-
-    /*
-     * Exercise #4 - Paint Job Estimator
+    
+    /**
+     * Exercise #6 - Celsius Temperature Table
      * 
-     * A painting company has determined that for every 115 square feet of wall 
-     * space, one gallon of paint and eight hours of labour will be required. 
-     * The company charges $18.00 per hour for labour. Write a program that 
-     * allows the user to enter the number of rooms to be painted and the price 
-     * of the paint per gallon. It should also ask for the square feet of wall 
-     * space in each room. The program should have methods with the following 
-     * names that return the following data:
-     *   - numGallons: The number of gallons of paint required
-     *   - hoursLabour: The hours of labour required
-     *   - costPaint: The cost of the paint
-     *   - labourCharges: The labour charges
-     *   - totalCost: The total cost of the paint job
-     * Then it should display the data on the screen.
-     * - Gaddis pg. 316-7
+     * The formula for converting a temperature from Fahrenheit to Celsius is
+     *     C = (5.0/9.0) * (F - 32)
+     * Where F is the Fahrenheit temperature and C is the Celsius temperature. 
+     * Write a method named celsius that accepts a Fahrenheit temperature as an 
+     * argument. The method should return the temperature, converted to Celsius. 
+     * Demonstrate the method by calling it in a loop that displays a table of 
+     * the Fahrenheit temperatures 0 through 20 and their Celsius equivalents.
      */
-    // TODO: Build the numGallons method here
-    // TODO: Build the hoursLabour method here
-    // TODO: Build the costPain method here
-    // TODO: Build the labourCharges method here
-    // TODO: Build the totalCost method here
-    public static void doExercise4() {
-        // TODO: Build the rest of exercise #4 here to test the above methods
-
+    // TODO: Build the celsius method here
+    
+    
+    public static void doExercise6() {
+        // TODO: Complete the rest of Exercise #6 here to test celsius
+        
     }
 
     /*
@@ -96,6 +91,9 @@ public class CPD3314Assign5 {
      * - Gaddis pg. 319
      */
     // TODO: Build the distance method here
+    
+    
+    
     public static void doExercise9() {
         // TODO: Build the rest of exercise #9 here to test the distance method
 
@@ -113,6 +111,9 @@ public class CPD3314Assign5 {
      * - Gaddis pg. 320
      */
     // TODO: Build the isPrime method here
+    
+    
+    
     public static void doExercise13() {
         // TODO: Build a sample program to test the isPrime method here
 
@@ -132,6 +133,9 @@ public class CPD3314Assign5 {
      * method should return true if the argument is even, or false otherwise.
      */
     // TODO: Build the isEven method here
+    
+    
+    
     public static void doExercise15() {
         // TODO: Build a sample program to test the isEven method here
 
