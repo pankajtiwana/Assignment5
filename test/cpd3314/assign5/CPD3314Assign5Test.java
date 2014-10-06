@@ -85,7 +85,7 @@ public class CPD3314Assign5Test {
     public void testIsPrimeCase1() {
         int input = 7;
         boolean expected = true;
-        double result = CPD3314Assign5.isPrime(input);
+        boolean result = CPD3314Assign5.isPrime(input);
         assertEquals("Testing if isPrime(num) produces accurate result.",
                 result, expected);
     }
@@ -97,7 +97,7 @@ public class CPD3314Assign5Test {
     public void testIsPrimeCase2() {
         int input = 6;
         boolean expected = false;
-        double result = CPD3314Assign5.isPrime(input);
+        boolean result = CPD3314Assign5.isPrime(input);
         assertEquals("Testing if isPrime(num) produces accurate result.",
                 result, expected);
     }
@@ -109,7 +109,7 @@ public class CPD3314Assign5Test {
     public void testIsEvenCase1() {
         int input = 6;
         boolean expected = true;
-        double result = CPD3314Assign5.isEven(input);
+        boolean result = CPD3314Assign5.isEven(input);
         assertEquals("Testing if isEven(num) produces accurate result.",
                 result, expected);
     }
@@ -121,7 +121,7 @@ public class CPD3314Assign5Test {
     public void testIsEvenCase2() {
         int input = 7;
         boolean expected = false;
-        double result = CPD3314Assign5.isEven(input);
+        boolean result = CPD3314Assign5.isEven(input);
         assertEquals("Testing if isEven(num) produces accurate result.",
                 result, expected);
     }
