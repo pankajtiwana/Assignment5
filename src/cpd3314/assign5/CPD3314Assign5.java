@@ -33,7 +33,15 @@ public class CPD3314Assign5 {
      */
     public static void main(String[] args) {
         // TODO: This is a sandbox. 
-        // Modify it and use it to call whatever methods below you want to run.
+        
+        /* Modify it and use it to call whatever methods below you want to run.
+         * 
+         * To be clear: Your task is to create methods. All of the automated
+         * tests in CPD3314Assign5Test.java are based on the methods described
+         * below. So for example, in Ex#2, you must build the calculateRetail
+         * method. The automated tests will tell you if you built it correctly.
+         *
+         */
         
     }
 
