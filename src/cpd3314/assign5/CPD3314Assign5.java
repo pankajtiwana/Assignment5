@@ -12,15 +12,17 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
  * See the License for the specific language governing permissions and 
  * limitations under the License. 
- */ 
+ */
 
 /* The following exercises are adapted from: 
  * Gaddis, T. (2013). Starting Out with Java: From Control Structures through  
  * Objects. (5th ed.). Upper Saddle River, NJ: Pearson Education. 
  * ISBN: 978-0-13-285583-9 
- */ 
-
+ */
 package cpd3314.assign5;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
 
 /**
  *
@@ -32,8 +34,33 @@ public class CPD3314Assign5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int ch;
+        System.out.println("enter the number of exercise you want to run:");
+        System.out.println("1. Retail value calculator:\n"
+                + "2.Celsius Temperature Table\n"
+                + "3.Distance travelled by a vehicle\n"
+                + "4.prime number\n"
+                + "5.even number ");
+        ch = in.nextInt();
+        switch (ch) {
+            case 1:
+                doExercise2();
+
+                break;
+            case 2:
+                doExercise6();
+                break;
+            case 3:
+                doExercise9();
+            case 4:
+                doExercise13();
+            case 5:
+                doExercise15();
+
+        }
+
         // TODO: This is a sandbox. 
-        
         /* Modify it and use it to call whatever methods below you want to run.
          * 
          * To be clear: Your task is to create methods. All of the automated
@@ -42,7 +69,6 @@ public class CPD3314Assign5 {
          * method. The automated tests will tell you if you built it correctly.
          *
          */
-        
     }
 
     /*
@@ -61,30 +87,62 @@ public class CPD3314Assign5 {
      * - Gaddis pg. 316
      */
     // TODO: Build the calculateRetail method here
-    
-    
     public static void doExercise2() {
+        Scanner in = new Scanner(System.in);
+        double wholesalecost;
+        double markup;
+        System.out.println("enter the wholesale cost of the item:");
+        wholesalecost = in.nextDouble();
+        System.out.println("enter the mark up value of the item:");
+        markup = in.nextDouble();
+
+        double r = calculateRetail(wholesalecost, markup);
+        System.out.println("the retail price of the item is:" + r);
         // TODO: Complete the rest of Exercise #2 here to test calculateRetail
 
     }
-    
+
+    public static double calculateRetail(double w, double m) {
+        double retail;
+        retail = w + (w * m) / 100;
+        return retail;
+    }
+
     /**
      * Exercise #6 - Celsius Temperature Table
-     * 
-     * The formula for converting a temperature from Fahrenheit to Celsius is
-     *     C = (5.0/9.0) * (F - 32)
-     * Where F is the Fahrenheit temperature and C is the Celsius temperature. 
-     * Write a method named celsius that accepts a Fahrenheit temperature as an 
-     * argument. The method should return the temperature, converted to Celsius. 
-     * Demonstrate the method by calling it in a loop that displays a table of 
-     * the Fahrenheit temperatures 0 through 20 and their Celsius equivalents.
+     *
+     * The formula for converting a temperature from Fahrenheit to Celsius is C
+     * = (5.0/9.0) * (F - 32) Where F is the Fahrenheit temperature and C is the
+     * Celsius temperature. Write a method named celsius that accepts a
+     * Fahrenheit temperature as an argument. The method should return the
+     * temperature, converted to Celsius. Demonstrate the method by calling it
+     * in a loop that displays a table of the Fahrenheit temperatures 0 through
+     * 20 and their Celsius equivalents.
      */
     // TODO: Build the celsius method here
-    
-    
     public static void doExercise6() {
+        double f;
+        int i;
+        Scanner ch = new Scanner(System.in);
+        // System.out.println("enter the temprature in fahrenheit:");
+        //f=ch.nextDouble();
+        System.out.println("the conversion is:");
+        System.out.println("Fahrenheit          Celsius");
+        System.out.println("--------------------------");
+        DecimalFormat format = new DecimalFormat("#.00");
+
+        for (i = 0; i <= 20; i++) {
+            double temp = celsius(i);
+            System.out.println(+i + "           " + format.format(temp));
+        }
+
         // TODO: Complete the rest of Exercise #6 here to test celsius
-        
+    }
+
+    public static double celsius(double ft) {
+        double ct;
+        ct = (5.0 / 9.0) * (ft - 32);
+        return ct;
     }
 
     /*
@@ -99,12 +157,31 @@ public class CPD3314Assign5 {
      * - Gaddis pg. 319
      */
     // TODO: Build the distance method here
-    
-    
-    
     public static void doExercise9() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("enter the speed of the vehicle in mph");
+        double speed = in.nextInt();
+        System.out.println("enter the hours it travelled");
+        double hours = in.nextInt();
+        System.out.println("hours             Distance travelled");
+        System.out.println("-------------------------------------");
+        for (int i = 1; i <= hours; i++) {
+            if (hours > 1 && speed > 0) {
+                double result = distance(speed, i);
+                System.out.println(+i + "                " + result);
+            } else {
+                System.out.println("enter valid value");
+            }
+        }
         // TODO: Build the rest of exercise #9 here to test the distance method
 
+    }
+
+    public static double distance(double s, double h) {
+
+        double dis = s * h;
+
+        return dis;
     }
 
     /*
@@ -119,11 +196,31 @@ public class CPD3314Assign5 {
      * - Gaddis pg. 320
      */
     // TODO: Build the isPrime method here
-    
-    
-    
     public static void doExercise13() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("enter any intiger:");
+        int p = in.nextInt();
+        boolean check = isPrime(p);
+        if (check) {
+            System.out.println("the number " + p + " is prime");
+        } else {
+            System.out.println("the number " + p + " is not prime");
+        }
         // TODO: Build a sample program to test the isPrime method here
+
+    }
+
+    public static boolean isPrime(int number) {
+        boolean isPrime = true;
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                isPrime = false;
+                return false;
+
+            }
+        }
+
+        return true;
 
     }
 
@@ -141,11 +238,24 @@ public class CPD3314Assign5 {
      * method should return true if the argument is even, or false otherwise.
      */
     // TODO: Build the isEven method here
-    
-    
-    
     public static void doExercise15() {
-        // TODO: Build a sample program to test the isEven method here
-
+        Scanner in = new Scanner(System.in);
+        System.out.println("enter a number");
+        int num = in.nextInt();
+        boolean check = isEven(num);
+        if (check) {
+            System.out.println("the number " + num + " is even");
+        } else {
+            System.out.println("the number " + num + " is not even");
+        }
     }
+
+    public static boolean isEven(int number) {
+        if (number % 2 == 0) {
+            return true;
+        }
+        return false;
+    }
+
+        // TODO: Build a sample program to test the isEven method here
 }
